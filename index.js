@@ -22,8 +22,13 @@ app.use("/feed", feedback);
 
 app.get("/", (req, res) => {
     res.send("API link for backend");
-  });
+});
 
-app.listen(3005, () =>{
-    console.log("http://localhost:3005");
+let port = process.env.port;
+if (port == null || port == ''){
+    port = 3006
+}
+
+app.listen(port, () =>{
+    console.log("http://localhost:3006");
 })
