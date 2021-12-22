@@ -16,6 +16,10 @@ app.use(express.json());
 const feedback = require("./getdata");
 app.use("/feed", feedback);
 
+app.get("/", (req, res) => {
+  res.send("API link for backend");
+});
+
 app.listen(3005, () =>{
     console.log("http://localhost:3005");
 })
