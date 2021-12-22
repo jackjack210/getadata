@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
     res.send("API link for backend");
 });
 
-let port = process.env.port;
+let port = process.env.PORT;
 if (port == null || port == ''){
     port = 3006
 }
